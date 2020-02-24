@@ -21,7 +21,7 @@ body {
     color: $p-color;
     line-height: 1.5em;
     h2 {
-        @include text-font-title-unicode-family("OpenSans-Bold");
+        @include text-font-unicode-family("OpenSans-Bold");
         font-size: $h2-font;
         text-transform: uppercase;
         color: $color-white;
@@ -30,7 +30,7 @@ body {
         list-style: none;
     }
     a {
-        @include text-font-title-unicode-family("OpenSans-Bold");
+        @include text-font-unicode-family("OpenSans-Bold");
         color: $color-primary;
         text-decoration: none;
         word-break: break-word;
@@ -44,6 +44,58 @@ body {
         @include text-font-unicode-family("Lora");
         font-size: $p-font;
         color: $p-color;
+    }
+}
+
+
+//! Search Form
+.search-form {
+    @include margin-auto;
+    text-align: center;
+    form {
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+        display: inline-block;
+        &:hover {
+            input {
+                padding-right: 10rem;
+            }
+            button a {
+                opacity: 1;
+                margin-right: 0;
+            }
+        }
+    }
+    input[type="text"] {
+        @include text-font-unicode-family("Lora-Italic");
+        width: 400px;
+        font-size: $p-font;
+        margin: 3rem 0;
+        padding: 15px;
+        outline: none;
+        color: $p-color;
+    }
+    button a {
+        @extend %fa-icon;
+        @extend .fas;
+        @include easing-effect(.5s);
+        background: $color-primary;
+        width: 90px;
+        height: 53px;
+        line-height: 53px;
+        border: none;
+        border-radius: 0;
+        position: absolute;
+        top: 3rem;
+        right: 0;
+        margin-right: -9rem;
+        opacity: 0;
+        &::before {
+            content: fa-content($fa-var-search);
+            font-size: 20px;
+            color: $color-white;
+        }
     }
 }
 
@@ -63,26 +115,36 @@ body {
 #logo {
     margin-right: auto;
 }
-#menu ul li {
-    display: inline-block;
-    vertical-align: top;
-    a {
-        padding: 8px 2rem;
-        text-transform: uppercase;
-        &:hover {
-            background: $color-a-hover;
-            color: $color-white;
-            border-radius: 5px;
+.menu {
+    ul li {
+        display: inline-block;
+        vertical-align: top;
+        a {
+            padding: 8px 2rem;
+            text-transform: uppercase;
+            &:hover {
+                background: $color-a-hover;
+                color: $color-white;
+                border-radius: 5px;
+            }
         }
     }
-}
+    &-wrap {
+        text-align: right;
+        .social-icon, .language {
+            display: inline-block;
+            vertical-align: middle;
+            margin-bottom: 2rem;
+        }
+    }
+} 
 .social-icon {
     * {
         display: inline-block;
         vertical-align: middle;
     }
     a {
-        border-radius: 3rem;
+        @include border-radius(3rem);
         background: $color-primary;
         color: $color-white;
         width: 3rem;
@@ -230,7 +292,7 @@ body {
                 }
             }
             &::after {
-                @include text-font-title-unicode-family("Font Awesome 5 Free");
+                @include text-font-unicode-family("Font Awesome 5 Free");
                 @include easing-effect(.5s);
                 content: fa-content($fa-var-angle-double-right);
                 color: $color-primary;

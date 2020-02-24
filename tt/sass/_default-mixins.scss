@@ -38,7 +38,8 @@
   transition: all $time ease;
 }
 
-//! Font Smoothing
+//! Font Smoothing 
+//* if fonts are already bold, should use it
 @mixin font-smoothing($value: antialiased) {
     @if $value == antialiased {
       -webkit-font-smoothing: antialiased;
@@ -49,3 +50,11 @@
       -moz-osx-font-smoothing: auto;
     }
   }
+
+//! Border-Radius
+@mixin border-radius($el){
+  -webkit-border-radius: $el;
+     -moz-border-radius: $el;
+      -ms-border-radius: $el;
+          border-radius: $el;  
+}

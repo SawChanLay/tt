@@ -11,9 +11,9 @@ $one-column-width: 100%;
   font-family: $font-name,"Arial",sans-serif;
 }
 
-@mixin text-font-title-unicode-family($font-name) {
-  font-family: $font-name,"Arial",sans-serif;
-}
+// @mixin text-font-title-unicode-family($font-name) {
+//   font-family: $font-name,"Arial",sans-serif;
+// }
 
 //! COLOR VARIABLES
 $color-primary: #0084c8;
