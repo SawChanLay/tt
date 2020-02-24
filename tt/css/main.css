@@ -2928,11 +2928,11 @@ body img { max-width: 100%; width: 100%; }
 body p { font-family: "Lora", "Arial", sans-serif; font-size: 1.6rem; color: #535353; }
 
 .search-form { max-width: 1170px; margin: 0 auto; text-align: center; }
-.search-form form { position: relative; overflow: hidden; white-space: nowrap; display: inline-block; }
+.search-form form { display: inline-block; position: relative; overflow: hidden; white-space: nowrap; margin: 3rem 0; }
 .search-form form:hover input { padding-right: 10rem; }
 .search-form form:hover button a { opacity: 1; margin-right: 0; }
-.search-form input[type="text"] { font-family: "Lora-Italic", "Arial", sans-serif; width: 400px; font-size: 1.6rem; margin: 3rem 0; padding: 15px; outline: none; color: #535353; }
-.search-form button a { -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; transition: all 0.5s ease; background: #0084c8; width: 90px; height: 53px; line-height: 53px; border: none; border-radius: 0; position: absolute; top: 3rem; right: 0; margin-right: -9rem; opacity: 0; }
+.search-form input[type="text"] { font-family: "Lora-Italic", "Arial", sans-serif; width: 400px; font-size: 1.6rem; padding: 15px; outline: none; color: #535353; }
+.search-form button a { -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; transition: all 0.5s ease; background: #0084c8; width: 90px; height: 53px; line-height: 53px; border: none; border-radius: 0; position: absolute; top: 0; right: 0; margin-right: -9rem; opacity: 0; }
 .search-form button a::before { content: "\f002"; font-size: 20px; color: #ffffff; }
 
 .header { background: #f9f9f9; border-top: 7px solid #ededed; border-bottom: 1px solid #ededed; }

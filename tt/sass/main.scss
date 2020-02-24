@@ -53,10 +53,11 @@ body {
     @include margin-auto;
     text-align: center;
     form {
+        display: inline-block;
         position: relative;
         overflow: hidden;
         white-space: nowrap;
-        display: inline-block;
+        margin: 3rem 0;
         &:hover {
             input {
                 padding-right: 10rem;
@@ -71,7 +72,6 @@ body {
         @include text-font-unicode-family("Lora-Italic");
         width: 400px;
         font-size: $p-font;
-        margin: 3rem 0;
         padding: 15px;
         outline: none;
         color: $p-color;
@@ -87,7 +87,7 @@ body {
         border: none;
         border-radius: 0;
         position: absolute;
-        top: 3rem;
+        top: 0;
         right: 0;
         margin-right: -9rem;
         opacity: 0;
