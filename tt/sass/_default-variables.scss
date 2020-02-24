@@ -1,0 +1,49 @@
+$one-column-width: 100%;
+
+
+//! FONT VARIABLES
+@include font-face("Lora", font-files("Lora-Regular.ttf", "Lora-Regular.woff", "Lora-Regular.eot", "Lora-Regular.svg"));
+@include font-face("Lora-Italic", font-files("Lora-Italic.ttf", "Lora-Italic.woff", "Lora-Italic.eot", "Lora-Italic.svg"));
+@include font-face("OpenSans-Light", font-files("OpenSans-Light.ttf", "OpenSans-Light.woff", "OpenSans-Light.eot", "OpenSans-Light.svg"));
+@include font-face("OpenSans-Bold", font-files("OpenSans-Bold.ttf", "OpenSans-Bold.woff", "OpenSans-Bold.eot", "OpenSans-Bold.svg"));
+
+@mixin text-font-unicode-family($font-name) {
+  font-family: $font-name,"Arial",sans-serif;
+}
+
+@mixin text-font-title-unicode-family($font-name) {
+  font-family: $font-name,"Arial",sans-serif;
+}
+
+//! COLOR VARIABLES
+$color-primary: #0084c8;
+
+$color-header: #f9f9f9;
+
+$color-header-border: #ededed;
+
+$color-tertiary: #333333;
+
+$color-footer: #282828;
+
+$color-a-hover: #c4c4c4;
+$color-a-button-hover: #005581;
+
+$color-white: #ffffff;
+$color-black: #000000;
+
+$p-color: #535353;
+
+//! FONT SIZES VARIABLES
+$p-font: 1.6rem;
+$menu-font: 1.5rem;
+
+$h2-font: 3.2rem;
+
+$small-font: 1.2rem;
+
+// // RESPONSIVE BREAKPOINTS
+// $bp-largest: 75em;   // 1200px
+// $bp-large: 62.5em;   // 1000px
+// $bp-medium: 50em;    // 800px;
+// $bp-small: 37.5em;    // 600px;
