@@ -76,7 +76,51 @@ body {
         }
     }
 }
-
+.social-icon {
+    * {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    a {
+        border-radius: 3rem;
+        background: $color-primary;
+        color: $color-white;
+        width: 3rem;
+        height: 3rem;
+        line-height: 3rem;
+        text-align: center;
+        margin-right: .5rem;
+        display: inline-block;
+    }
+    &-facebook, &-twitter, &-linkedin {
+        a {
+            @extend %fa-icon;
+            @extend .fab;
+            &:hover {
+                background: $color-a-button-hover;
+            }
+        }
+    }
+    &-facebook a::before {
+        content: fa-content($fa-var-facebook-f);
+    }
+    &-twitter a::before {
+        content: fa-content($fa-var-twitter);
+    }
+    &-linkedin a::before {
+        content: fa-content($fa-var-linkedin-in); 
+    }
+    &-search a{
+        @extend %fa-icon;
+        @extend .fas;
+        &::before {
+            content: fa-content($fa-var-search);  
+        }
+        &:hover {
+            background: $color-a-button-hover;
+        }
+    }
+}
 //! SLIDER
 .slider {
     position: relative;
