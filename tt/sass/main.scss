@@ -54,16 +54,16 @@ body {
     display: none;
     text-align: center;
     form {
-        display: inline-block;
+        display: block;
         position: relative;
         overflow: hidden;
-        white-space: nowrap;
-        margin: 3rem 0;
+        margin: 3rem auto;
+        width: 400px;
         &:hover {
             input {
                 padding-right: 10rem;
             }
-            button a {
+            button {
                 opacity: 1;
                 margin-right: 0;
             }
@@ -71,13 +71,13 @@ body {
     }
     input[type="text"] {
         @include text-font-unicode-family("Lora-Italic");
-        width: 400px;
+        width: 100%;
         font-size: $p-font;
         padding: 15px;
         outline: none;
         color: $p-color;
     }
-    button a {
+    button {
         @extend %fa-icon;
         @extend .fas;
         @include easing-effect(.5s);
@@ -132,7 +132,7 @@ body {
     }
     &-wrap {
         text-align: right;
-        .social-icon, .language {
+        .social-icon, .language, .search-box-wrap {
             display: inline-block;
             vertical-align: middle;
             margin-bottom: 2rem;
@@ -187,6 +187,42 @@ body {
             background: $color-a-button-hover;
         }
     }
+}
+.search-box-wrap {
+    margin: 0 1.5rem 0 .5rem;
+}
+.search-box {
+    position: relative;
+    &-input {
+        @include border-radius(20px);
+        width: 30px;
+        height: 30px;
+        background: $color-white;
+        border: 1px solid #ccc;
+        outline: none;
+    }
+    &-btn {
+        @extend %fa-icon;
+        @extend .fas;
+        position: absolute;
+        top: 50%;
+        right: .9rem;
+        border: none;
+        outline: none;
+        transform: translateY(-50%);
+        &::after {
+            content: fa-content($fa-var-search);
+        }
+        &:focus {
+            background: #f9f9f9;
+            border-radius: 20px;
+            width: 200px;
+            padding-left: 15px;
+            cursor: auto;
+            color: #535353;
+        }
+    }
+    
 }
 //! SLIDER
 .slider {
