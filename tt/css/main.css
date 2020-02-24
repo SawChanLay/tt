@@ -2930,7 +2930,7 @@ body p { font-family: "Lora", "Arial", sans-serif; font-size: 1.6rem; color: #53
 .search-form { max-width: 1170px; margin: 0 auto; display: none; text-align: center; }
 .search-form form { display: block; position: relative; overflow: hidden; margin: 3rem auto; width: 400px; }
 .search-form form:hover input { padding-right: 10rem; }
-.search-form form:hover button { opacity: 1; margin-right: 0; }
+.search-form form:hover button { opacity: 1; margin-right: 0; outline: none; cursor: pointer; }
 .search-form input[type="text"] { font-family: "Lora-Italic", "Arial", sans-serif; width: 100%; font-size: 1.6rem; padding: 15px; outline: none; color: #535353; }
 .search-form button { -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; transition: all 0.5s ease; background: #0084c8; width: 90px; height: 53px; line-height: 53px; border: none; border-radius: 0; position: absolute; top: 0; right: 0; margin-right: -9rem; opacity: 0; }
 .search-form button::before { content: "\f002"; font-size: 20px; color: #ffffff; }
