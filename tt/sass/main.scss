@@ -51,6 +51,7 @@ body {
 //! Search Form
 .search-form {
     @include margin-auto;
+    display: none;
     text-align: center;
     form {
         display: inline-block;
@@ -138,6 +139,10 @@ body {
         }
     }
 } 
+.language a {
+    @include text-font-unicode-family("OpenSans-Light");
+    font-size: 13px;
+}
 .social-icon {
     * {
         display: inline-block;
