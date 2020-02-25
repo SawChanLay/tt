@@ -25,6 +25,7 @@ body {
         font-size: $h2-font;
         text-transform: uppercase;
         color: $color-white;
+        line-height: 1.5em;
     }
     li {
         list-style: none;
@@ -44,6 +45,7 @@ body {
         @include text-font-unicode-family("Lora");
         font-size: $p-font;
         color: $p-color;
+        line-height: 1.5em;
     }
 }
 
@@ -196,32 +198,42 @@ body {
 .search-box {
     position: relative;
     &-input {
+        @include text-font-unicode-family("Lora-Italic");
         @include border-radius(20px);
+        @include easing-effect(.5s);
         width: 30px;
         height: 30px;
+        font-size: $p-font;
         background: $color-white;
         border: 1px solid #ccc;
         outline: none;
+        cursor: pointer;
+        &:focus {
+            @include border-radius(2rem);
+            background: $color-white;
+            width: 20rem;
+            padding-left: 1.5rem;
+            padding-right: 3.5rem;
+            color: #535353;
+            cursor: auto;
+        }
     }
     &-btn {
+        @include border-radius(50%);
         @extend %fa-icon;
         @extend .fas;
         position: absolute;
         top: 50%;
-        right: .9rem;
+        right: 1px;
+        padding: .65rem;
         border: none;
         outline: none;
         transform: translateY(-50%);
+        cursor: pointer;
         &::after {
             content: fa-content($fa-var-search);
-        }
-        &:focus {
-            background: #f9f9f9;
-            border-radius: 20px;
-            width: 200px;
-            padding-left: 15px;
-            cursor: auto;
-            color: #535353;
+            font-size: 1.5rem;
+            color: #c4c4c4;
         }
     }
     
@@ -237,7 +249,7 @@ body {
         &-text {
             @include text-font-unicode-family("OpenSans-Bold");
             color: $color-header-border;
-            line-height: 7rem;
+            line-height: 1.5em;
             text-align: right;
         }
         &-text--1 {

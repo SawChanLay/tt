@@ -2921,11 +2921,11 @@ readers do not read off random characters that represent icons */
 html { box-sizing: border-box; font-size: 62.5%; }
 
 body { font-family: "Lora", "Arial", sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size: 1.5rem; color: #535353; line-height: 1.5em; }
-body h2 { font-family: "OpenSans-Bold", "Arial", sans-serif; font-size: 3.2rem; text-transform: uppercase; color: #ffffff; }
+body h2 { font-family: "OpenSans-Bold", "Arial", sans-serif; font-size: 3.2rem; text-transform: uppercase; color: #ffffff; line-height: 1.5em; }
 body li { list-style: none; }
 body a { font-family: "OpenSans-Bold", "Arial", sans-serif; color: #0084c8; text-decoration: none; word-break: break-word; cursor: pointer; }
 body img { max-width: 100%; width: 100%; }
-body p { font-family: "Lora", "Arial", sans-serif; font-size: 1.6rem; color: #535353; }
+body p { font-family: "Lora", "Arial", sans-serif; font-size: 1.6rem; color: #535353; line-height: 1.5em; }
 
 .search-form { max-width: 1170px; margin: 0 auto; display: none; text-align: center; }
 .search-form form { display: block; position: relative; overflow: hidden; margin: 3rem auto; width: 400px; }
@@ -2961,14 +2961,14 @@ body p { font-family: "Lora", "Arial", sans-serif; font-size: 1.6rem; color: #53
 .search-box-wrap { margin: 0 1.5rem 0 .5rem; }
 
 .search-box { position: relative; }
-.search-box-input { -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; border-radius: 20px; width: 30px; height: 30px; background: #ffffff; border: 1px solid #ccc; outline: none; }
-.search-box-btn { position: absolute; top: 50%; right: .9rem; border: none; outline: none; transform: translateY(-50%); }
-.search-box-btn::after { content: "\f002"; }
-.search-box-btn:focus { background: #f9f9f9; border-radius: 20px; width: 200px; padding-left: 15px; cursor: auto; color: #535353; }
+.search-box-input { font-family: "Lora-Italic", "Arial", sans-serif; -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; border-radius: 20px; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; transition: all 0.5s ease; width: 30px; height: 30px; font-size: 1.6rem; background: #ffffff; border: 1px solid #ccc; outline: none; cursor: pointer; }
+.search-box-input:focus { -webkit-border-radius: 2rem; -moz-border-radius: 2rem; -ms-border-radius: 2rem; border-radius: 2rem; background: #ffffff; width: 20rem; padding-left: 1.5rem; padding-right: 3.5rem; color: #535353; cursor: auto; }
+.search-box-btn { -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; border-radius: 50%; position: absolute; top: 50%; right: 1px; padding: .65rem; border: none; outline: none; transform: translateY(-50%); cursor: pointer; }
+.search-box-btn::after { content: "\f002"; font-size: 1.5rem; color: #c4c4c4; }
 
 .slider { position: relative; margin-bottom: 3rem; }
 .slider-right { position: absolute; right: 25rem; bottom: 20rem; }
-.slider-right-text { font-family: "OpenSans-Bold", "Arial", sans-serif; color: #ededed; line-height: 7rem; text-align: right; }
+.slider-right-text { font-family: "OpenSans-Bold", "Arial", sans-serif; color: #ededed; line-height: 1.5em; text-align: right; }
 .slider-right-text--1 { font-size: 4.4rem; }
 .slider-right-text--2 { font-size: 7rem; }
 
