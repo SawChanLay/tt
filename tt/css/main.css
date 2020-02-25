@@ -2976,11 +2976,9 @@ body p { font-family: "Lora", "Arial", sans-serif; font-size: 1.6rem; color: #53
 
 .main-inner { max-width: 1170px; margin: 0 auto; }
 
-.col-three { display: grid; grid-template-rows: auto 1fr; grid-template-columns: repeat(3, 370px); grid-gap: 3rem; margin-bottom: 3rem; }
-.col-three-1 { text-align: center; grid-column: 1/-1; padding: 2rem; }
+.main-col-three .view-rows { display: grid; grid-template-columns: repeat(3, 370px); grid-gap: 3rem; margin-bottom: 3rem; }
 
-.col-four { display: grid; grid-template-rows: auto 1fr; grid-template-columns: repeat(4, 265px); grid-gap: 3rem; }
-.col-four-1 { text-align: center; grid-column: 1 / -1; padding: 2rem; }
+.main-col-four .view-rows { display: grid; grid-template-columns: repeat(4, 265px); grid-gap: 3rem; }
 
 .view-row-title { font-size: 17px; text-transform: uppercase; min-height: 48px; }
 .view-row-title a:hover { color: #005581; }
@@ -3004,7 +3002,7 @@ body p { font-family: "Lora", "Arial", sans-serif; font-size: 1.6rem; color: #53
 
 .sing-up input { display: block; }
 .sing-up input[type="text"], .sing-up input[type="submit"] { height: 54px; }
-.sing-up input[type="text"] { font-family: "Lora-Italic", "Arial", sans-serif; font-size: 1.6rem; padding: 1.5rem 6.3rem 1.5rem 1rem; margin-bottom: 1rem; outline: none; }
+.sing-up input[type="text"] { font-family: "Lora-Italic", "Arial", sans-serif; font-size: 1.6rem; padding: 15px; margin-bottom: 1rem; outline: none; width: 26.3rem; }
 .sing-up input[type="submit"] { font-family: "OpenSans-Bold", "Arial", sans-serif; background: #0084c8; font-size: 15px; padding: 1.5rem 4.6rem; border: none; color: #ffffff; text-transform: uppercase; }
 .sing-up input[type="submit"]:hover { background: #005581; }
 
