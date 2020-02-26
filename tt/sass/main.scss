@@ -26,6 +26,11 @@ body {
         text-transform: uppercase;
         color: $color-white;
         line-height: 1.5em;
+        &.block-title {
+            margin-bottom: 20px;
+            padding: 20px;
+            text-align: center;
+        }
     }
     li {
         list-style: none;
@@ -110,7 +115,8 @@ body {
     border-top: 7px solid $color-header-border;
     border-bottom: 1px solid $color-header-border;
     &-inner {
-        @include margin-auto;
+        max-width: 1170px;
+        margin: 1rem auto 2rem;
     }
     &-wrap {
         @include d-flex;
@@ -123,9 +129,9 @@ body {
 .menu {
     ul li {
         display: inline-block;
-        vertical-align: top;
+        vertical-align: middle;
         a {
-            padding: 8px 2rem;
+            padding: .9rem 2rem;
             text-transform: uppercase;
             &:hover {
                 background: $color-a-hover;
@@ -140,6 +146,79 @@ body {
             display: inline-block;
             vertical-align: middle;
             margin-bottom: 2rem;
+        }
+    }
+    .item {
+        &--2, &--7 {
+            position: relative;
+            a {
+                @include text-font-unicode-family("OpenSans-Bold");
+                @extend %fa-icon;
+                @extend .fas;
+                line-height: 2rem;
+                &::after {
+                    @include text-font-unicode-family("Font Awesome 5 Free");
+                    content: fa-content($fa-var-angle-down);
+                    margin-left: 5px;
+                }
+            }
+            ul.menu {
+                @include menu-annimate;
+                position: absolute;
+                z-index: 9;
+                visibility: hidden;
+                padding-top: .9rem;
+                min-width: 18rem;
+                li {
+                    display: block;
+                    background: #0084c8;
+                    text-align: left;
+                    a {
+                        color: $color-white;
+                        padding: 1rem .7rem;
+                        margin: 0 1.5rem;
+                        border-bottom: 1px dotted $color-white;
+                        display: block;
+                        line-height: 1.5em;
+                        border-radius: 0;
+                        &::after {
+                            content: "";
+                        }
+                        &:hover {
+                            background: unset;
+                            color: $color-black;
+                        }
+                    }
+                    &.menu-3 a {
+                        border-bottom: 0;
+                    }
+                    &.first {
+                        @include border-top-radius(5px, 5px);
+                    }
+                    &.last {
+                        @include border-bottom-radius(5px, 5px);
+                    }
+                }
+                &::before {
+                    @include text-font-unicode-family("Font Awesome 5 Free");
+                    content: fa-content($fa-var-caret-up);
+                    color: $color-primary;
+                    font-size: 2.7rem;
+                    position: absolute;
+                    top: 0;
+                    left: 1rem;
+                    line-height: 1rem;
+                }
+            }
+            &:hover ul.menu {
+                visibility: inherit;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        &--7 ul.menu li {
+            &.menu-1 a {
+                border-bottom: 0;
+            }
         }
     }
 } 
@@ -193,7 +272,7 @@ body {
     }
 }
 .search-box-wrap {
-    margin: 0 1.5rem 0 .5rem;
+    margin: 0 2.5rem 0 1rem;
 }
 .search-box {
     position: relative;
@@ -269,19 +348,17 @@ body {
 .main-inner {
     @include margin-auto;
 }
-.main-col-three .view-rows {
-    display: grid;
-    grid-template-columns: repeat(3, 370px);
-
+.view-rows {
     grid-gap: 3rem;
-
+}
+.main-col-three .view-rows {
+    @include display-grid;
+    @include grid-template-columns(repeat(3, 370px));
     margin-bottom: 3rem;
 }
 .main-col-four .view-rows {
-    display: grid;
-    grid-template-columns: repeat(4, 265px);
-
-    grid-gap: 3rem;
+    @include display-grid;
+    @include grid-template-columns(repeat(4, 265px));
 }
 .view-row {
     &-title {
@@ -291,7 +368,6 @@ body {
         a:hover {
             color: $color-a-button-hover;
         }
-        // margin-bottom: 2rem;
     }
     &-date, &-category {
         font-size: 12px;

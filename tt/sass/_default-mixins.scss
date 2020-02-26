@@ -58,3 +58,42 @@
       -ms-border-radius: $el;
           border-radius: $el;  
 }
+
+//! DISPLAY GRID
+@mixin display-grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+@mixin grid-template-columns($columns...) {
+  -ms-grid-columns: $columns;
+  grid-template-columns: $columns;
+}
+
+@mixin grid-template-rows($rows...) {
+  -ms-grid-rows: $rows;
+  grid-template-rows: $rows;
+}
+
+//! MENU ANNIMATE
+@mixin menu-annimate {
+	-webkit-transition: -webkit-transform 0.2s ease-out;
+	-moz-transition: -moz-transform 0.2s ease-out;
+	transition: transform 0.2s ease-out;
+	transform: translate3d(0, -5px, 0);
+}
+
+//! BORDER RADIUS
+@mixin border-top-radius($topleft, $topright){
+  border-top-left-radius: $topleft;
+  border-top-right-radius: $topright;
+  -webkit-border-top-left-radius: $topleft;
+	-webkit-border-top-right-radius: $topright;
+} 
+
+@mixin border-bottom-radius ($bottomright, $bottomleft) {
+	border-bottom-right-radius: $bottomright;
+	border-bottom-left-radius: $bottomleft;
+	-webkit-border-bottom-right-radius: $bottomright;
+  -webkit-border-bottom-left-radius: $bottomleft;
+}
