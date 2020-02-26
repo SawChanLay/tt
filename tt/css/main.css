@@ -2952,7 +2952,7 @@ body p { font-family: "Lora", "Arial", sans-serif; font-size: 1.6rem; color: #53
 .menu .item--2 a::after, .menu .item--7 a::after { font-family: "Font Awesome 5 Free", "Arial", sans-serif; content: "\f107"; margin-left: 5px; }
 .menu .item--2 ul.menu, .menu .item--7 ul.menu { -webkit-transition: -webkit-transform 0.2s ease-out; -moz-transition: -moz-transform 0.2s ease-out; transition: transform 0.2s ease-out; transform: translate3d(0, -5px, 0); position: absolute; z-index: 9; visibility: hidden; padding-top: .9rem; min-width: 18rem; }
 .menu .item--2 ul.menu li, .menu .item--7 ul.menu li { display: block; background: #0084c8; text-align: left; }
-.menu .item--2 ul.menu li a, .menu .item--7 ul.menu li a { color: #ffffff; padding: 1rem .7rem; margin: 0 1.5rem; border-bottom: 1px dotted #ffffff; display: block; line-height: 1.5em; border-radius: 0; }
+.menu .item--2 ul.menu li a, .menu .item--7 ul.menu li a { -webkit-transition: -webkit-transform 0.2s ease-out; -moz-transition: -moz-transform 0.2s ease-out; transition: transform 0.2s ease-out; transform: translate3d(0, -5px, 0); color: #ffffff; padding: 1rem .7rem; margin: 0 1.5rem; border-bottom: 1px dotted #ffffff; display: block; line-height: 1.5em; border-radius: 0; }
 .menu .item--2 ul.menu li a::after, .menu .item--7 ul.menu li a::after { content: ""; }
 .menu .item--2 ul.menu li a:hover, .menu .item--7 ul.menu li a:hover { background: unset; color: #000000; }
 .menu .item--2 ul.menu li.menu-3 a, .menu .item--7 ul.menu li.menu-3 a { border-bottom: 0; }
@@ -2960,6 +2960,7 @@ body p { font-family: "Lora", "Arial", sans-serif; font-size: 1.6rem; color: #53
 .menu .item--2 ul.menu li.last, .menu .item--7 ul.menu li.last { border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; -webkit-border-bottom-right-radius: 5px; -webkit-border-bottom-left-radius: 5px; }
 .menu .item--2 ul.menu::before, .menu .item--7 ul.menu::before { font-family: "Font Awesome 5 Free", "Arial", sans-serif; content: "\f0d8"; color: #0084c8; font-size: 2.7rem; position: absolute; top: 0; left: 1rem; line-height: 1rem; }
 .menu .item--2:hover ul.menu, .menu .item--7:hover ul.menu { visibility: inherit; transform: translate3d(0, 0, 0); }
+.menu .item--2:hover ul.menu li a, .menu .item--7:hover ul.menu li a { transform: translate3d(0, 0, 0); }
 .menu .item--7 ul.menu li.menu-1 a { border-bottom: 0; }
 
 .language a { font-family: "OpenSans-Light", "Arial", sans-serif; font-size: 13px; }
